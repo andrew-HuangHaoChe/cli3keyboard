@@ -1,0 +1,260 @@
+$fontSize: 14px;
+$fontSize-l: 16px;
+$blockSize-sm: 10px;
+$blockSize-md: 30px;
+$blockSize-lg: 60px;
+html,
+body {
+  font-family: "微軟正黑體", "Microsoft JhengHei", "Segoe UI Semibold",
+    "Segoe UI", "Lucida Grande" !important;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+.wrapper {
+  flex: 1 0 auto;
+  //padding: 30px;
+}
+.routerActive {
+  color: #ff570b;
+}
+.nav-header {
+  display: flex;
+  flex-wrap: wrap;
+}
+.logoImg {
+  height: 60px;
+}
+.home-nav-icon {
+  display: flex;
+  align-items: center;
+}
+.icon {
+  font-size: $fontSize;
+}
+.homeFont {
+  font-size: $fontSize;
+}
+.favBtn {
+  min-height: 25px;
+  .heartIcon {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: $fontSize * 2;
+    color: $midnightGreen;
+  }
+}
+@media (max-width: 767px) {
+  .nav-item {
+    padding-bottom: $blockSize-sm;
+  }
+  .home-nav-icon > li > a > i {
+    display: none !important;
+  }
+  .favBtn{
+    height: 25px;
+  }
+  .fa-heartbeat::before {
+    display: none !important;
+  }
+}
+.favorite-dropdown-menu {
+  min-width: 230px !important;
+  .favoriteList {
+    position: relative;
+  }
+}
+.favLength {
+  min-width: 21px;
+  height: 21px;
+  position: absolute;
+  top: -5px;
+  right: -12px;
+  background: $rattan;
+  color: $midnightGreen;
+  border-radius: 15px;
+  z-index: 999;
+  font-weight: 600;
+}
+.header-carousel-item-fir {
+  position: relative;
+  height: 650px;
+  background-image: url(https://images.unsplash.com/photo-1477764864052-f721644f01a8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);
+  background-size: cover;
+  background-position: center center;
+}
+.header-carousel-item-sec {
+  height: 650px;
+  background-image: url(https://images.unsplash.com/photo-1591922883783-23c629acfe70?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80);
+  background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+}
+.header-carousel-item-thr {
+  height: 650px;
+  background-image: url(https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);
+  background-size: cover;
+  background-position: bottom center;
+}
+.carousel-caption {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  height: 150px;
+}
+.carousel-caption-content {
+  position: relative;
+}
+.carBlock {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+@media (max-width: 767px) {
+  .header-carousel-item-fir,
+  .header-carousel-item-sec,
+  .header-carousel-item-thr {
+    height: 450px;
+  }
+}
+.box-shadow {
+  transition: box-shadow 0.3s;
+}
+.box-shadow:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.24);
+}
+.cardCate {
+  width: 25%;
+}
+.card-title {
+  height: 40px;
+  width: 100%;
+}
+.card-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.card-img {
+  height: 180px;
+}
+.option-font {
+  color: $midnightGreen;
+}
+.active {
+  color: $white;
+}
+.priceLine {
+  text-decoration: line-through;
+}
+.keyboardCard {
+  animation: fadeIn 1s;
+  min-height: 450px;
+  .liked {
+    position: absolute !important;
+    z-index: 2;
+    top: 10px;
+    right: 10px;
+    font-size: $fontSize-l;
+    a {
+      text-decoration: none !important;
+      z-index: 3;
+    }
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.dropup .dropdown-toggle::after {
+  display: none !important;
+}
+.btn-style {
+  position: relative;
+  border-radius: 99em !important;
+  min-width: 60px;
+  height: 60px;
+  background-color: $white !important;
+}
+.quantity {
+  position: absolute;
+  height: $fontSize * 1.5;
+  max-width: $fontSize * 1.5;
+  background-color: $midnightGreen;
+  color: $white;
+  right: -1px;
+  top: -1px;
+  border-radius: 99em;
+  .qtext {
+    height: $fontSize * 1.5;
+    width: $fontSize * 1.5;
+  }
+}
+.fa-shopping-basket {
+  color: $midnightGreen;
+  font-size: $fontSize * 1.5;
+}
+.cartstyle {
+  min-width: 370px;
+  max-height: 30vh;
+  overflow-y: auto;
+}
+.favFont {
+  margin-top: -3px;
+  font-size: $fontSize;
+}
+.fa-heart::before {
+  font-size: $fontSize * 2;
+}
+.drop-item-f {
+  max-width: 250px;
+}
+.dropleft .dropdown-toggle::before {
+  display: none !important;
+}
+.dropdown-toggle::after {
+  display: none !important;
+}
+.orderCoupon {
+  height: 40px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.3s;
+}
+.incoupon {
+  height: 40px !important;
+}
+.orderCoupon:hover {
+  box-shadow: 3px 3px 13px rgba(0, 0, 0, 0.2);
+}
+.cartIcon {
+  position: fixed !important;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  right: 2rem;
+  bottom: 2rem;
+  margin-left: 20px;
+  display: none;
+  z-index: 9999;
+}
+.cartIcon::before,
+.cartIcon::after {
+  position: absolute;
+  content: "";
+}

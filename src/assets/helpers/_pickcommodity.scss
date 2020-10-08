@@ -1,0 +1,55 @@
+.picContent{
+    padding-top:60px;
+}
+.picCard{
+    box-shadow: 1px 4px 10px rgba(0, 0, 0, .24);
+}
+.img-box{
+    position: relative;
+    box-shadow: 1px 4px 10px rgba(0, 0, 0, .24);
+    min-height: 500px;
+    max-width: 500px;
+    animation: slideIn 1s ease;
+    background-color:$white;
+}
+.img-box > img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    padding:0 30px;
+}
+@media (max-width: 767px) {
+    .img-box{
+        margin-top:30px;
+        min-height: 300px;
+    }
+}
+@keyframes slideIn{
+    0%{
+        transform: translateY(250px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+.pdwrapper::after{
+    position: absolute;
+    top:30px;
+    right: 0;
+    content:"";
+    min-width: 1000px;
+    height: 500px;
+    background-color:$beanGreen;
+    z-index: -3;
+}
+@media (max-width: 767px) {
+    .pdwrapper::after{
+        height: 300px;
+    }
+}
+.pickBorder{
+    border-bottom: 1px solid $beanGreen;
+}
